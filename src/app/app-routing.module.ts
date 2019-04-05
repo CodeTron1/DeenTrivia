@@ -14,7 +14,12 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'about-us', loadChildren: './about-us/about-us.module#AboutUsPageModule' },
+  { path: 'marathon', loadChildren: './marathon/marathon.module#MarathonPageModule' },
+  { path: 'multi-player', loadChildren: './multi-player/multi-player.module#MultiPlayerPageModule' },
+  { path: 'single-player', loadChildren: './single-player/single-player.module#SinglePlayerPageModule' },
+  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' }
 ];
 
 @NgModule({

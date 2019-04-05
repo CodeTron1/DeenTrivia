@@ -9,36 +9,46 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+<ion-content class="mailContent">
+  <ion-card class="welcome-card">
+    <ion-card-content>
+      <h1>Deen Trivia</h1>
+      <p>Please select the game mode you want to play. Each section has its own set of question with interactive points.</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Continuous Questions.</ion-card-subtitle>
+      <ion-card-title>Marathon</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="myContent">
+      <p>This is the section in which you will constantly get the question and you can check your limit. Every question will be tougher then the before one.</p>
+      <ion-button (click)="playmarathon()" button-default>Play</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>All the way up.</ion-card-subtitle>
+      <ion-card-title>Single Player</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="myContent">
+      <p>You will get combine set of 30 questions and at each correct answer you will get some points. If you will be able to give all the correct answers you will be the Deen Trivia Master</p>
+      <ion-button (click)="playfakesingleplayer()" class="button button-default">Play</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Tackle them all.</ion-card-subtitle>
+      <ion-card-title>Multiplayer</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="myContent">
+      <p>In fiendly battlefield you and your friend will keep getting similar questions untill any one of you give 3 wrong answers. The one with the first 3 wrong answer losses to the other friend.</p>
+      <ion-button (click)="playmultiplayer()" class="button button-default">Play</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
