@@ -8,28 +8,28 @@
 </ion-header>
 
 <ion-content padding class="myContent">
-  <ion-slides #slides (ionSlidesDidLoad)="slidesDidLoad(mySlider)">
-    <ion-slide>
+  <ion-slides [options]="sliderConfig" #myslider (ionSlidesDidLoad)="slidesloaded(myslider)">
+    <ion-slide *ngFor="let question of allquestions">
       <ion-card>
         <ion-card-header>
-      <h1>Q.1 What is the name of our Prophet?</h1>
+      <h1>Q.{{question.no}} {{question.question}}?</h1>
     </ion-card-header>
     <ion-card-content>
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-button class="button button-default button-dark"><p>A. Ismail</p></ion-button>
+          <ion-button class="button button-default button-dark"  (click)="checkanswer(question.no, '1', $event)"><p>A. {{question.option1}}</p></ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="button button-default button-dark"><p>B. Moosa</p></ion-button>
+          <ion-button class="button button-default button-dark" (click)="checkanswer(question.no, '2', $event)"><p>B. {{question.option2}}</p></ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button class="button button-default button-dark"><p>C. Muhammad</p></ion-button>
+          <ion-button class="button button-default button-dark" (click)="checkanswer(question.no, '3', $event)"><p>C. {{question.option3}}</p></ion-button>
         </ion-col>
-        <ion-col>
-          <ion-button class="button button-default button-dark"><p>D. Umar</p></ion-button>
+        <ion-col><!-- question.no, question.option4 -->
+          <ion-button class="button button-default button-dark" (click)="checkanswer(question.no, '4')"><p>D. {{question.option4}}</p></ion-button>
         </ion-col>
     </ion-row>
   </ion-grid>
@@ -37,7 +37,7 @@
 </ion-card>
   </ion-slide>
 
-<ion-slide>
+<!-- <ion-slide>
   <ion-card>
     <ion-card-header>
       <h1>Q.2 Who was the first prophet in the world?</h1>
@@ -64,7 +64,7 @@
 </ion-card-content>
 </ion-card>
   </ion-slide>
-</ion-slides>
+</ion-slides> -->
 <!-- <ion-slides>
     <ion-slide>
       <h1>Slide 1</h1>
@@ -76,8 +76,8 @@
 
     <ion-slide>
       <h1>Slide 3</h1>
-    </ion-slide> 
-  </ion-slides> -->
+    </ion-slide>--> 
+  </ion-slides> 
 </ion-content>
 
 <ion-footer>

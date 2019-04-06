@@ -95,6 +95,7 @@ export class MyserviceService {
   setfakesingleplayer(){
   	this.allquestions.push({id:"1", no:"1", question:"What is the name of our prophet", option1:"Nasir", option2:"Ehsaan", option3:"Muhammad", option4:"Mujeeb", answer:"3", difficulty:"0", category:"prophet", image:"NULL", audio:"NULL", version:"0"});
 	this.allquestions.push({id:"2", no:"2", question:"Who was the first prophet in the world?", option1:"Nooh A.S (Noah)", option2:"Aadam A.S (Adam)", option3:"Muhammad", option4:"Ibraheem(Abraham)", answer:"2", difficulty:"0", category:"allprophets", image:"NULL", audio:"NULL", version:"0"});
+	this.allquestions.push({id:"3", no:"3", question:"Who was the first prophet in the world?", option1:"Nooh A.S (Noah)", option2:"Aadam A.S (Adam)", option3:"Muhammad", option4:"Ibraheem(Abraham)", answer:"2", difficulty:"0", category:"allprophets", image:"NULL", audio:"NULL", version:"0"});
   }
 
   getfakesingleplayer(){

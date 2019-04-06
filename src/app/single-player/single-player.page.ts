@@ -8,12 +8,17 @@ import { IonSlides } from '@ionic/angular';
   styleUrls: ['./single-player.page.scss'],
 })
 export class SinglePlayerPage implements OnInit {
-  @ViewChild('slides', { read: IonSlides }) slides: IonSlides;
+  // @ViewChild('slides', { read: IonSlides }) slides: IonSlides;
   // slideOpts = {
   //   effect: 'flip'
   // };
   constructor(private service: MyserviceService) { }
   allquestions = [];
+  slides:any;
+  sliderConfig = {
+  	centeredSlides: true
+  	// slidesPerView: 1.6
+  }
   ngOnInit() {
  //  	var slides = document.querySelector('ion-slides');
 	// slides.options = {
@@ -30,8 +35,39 @@ export class SinglePlayerPage implements OnInit {
   	console.log(this.allquestions);
   }
 
-  SlidesDidLoad(slides: Slides){
+  slidesloaded(slides: Slides){
+  	console.log('ionslides did load');
   	console.log(slides);
+  	slides.lockSwipes(true);
+  	slides.slideNext();
+  	this.slides = slides;
   }
+
+  checkanswer(num, answer, event){
+  	console.log('check answer '+num);
+  	console.log(event);
+  	if(this.allquestions[num-1].answer == answer){
+  		//answer is correct
+  		var slides = this.slides;
+		this.slides.isEnd().then((something)=>{
+			if(something == true){
+				alert('Masha Allah, you have won');
+			}else{
+				event.originalTarget.style.backgroundColor = 'blue';
+				setTimeout(function() {
+					event.originalTarget.style.backgroundColor = 'green';		
+				}, 500);
+				setTimeout(function(){					
+					slides.lockSwipes(false).then(()=>{					
+						slides.slideNext();
+						slides.lockSwipes(true);
+					});
+				}, 500);
+			}
+		});
+  	}else{
+  		//answer is incorrect
+  	}
+  }	
 
 }
