@@ -55,10 +55,10 @@ export class SinglePlayerPage implements OnInit {
 			}else{
 				event.originalTarget.style.backgroundColor = 'blue';
 				setTimeout(function() {
-					event.originalTarget.style.backgroundColor = 'green';		
+					event.originalTarget.style.backgroundColor = 'green';
 				}, 500);
-				setTimeout(function(){					
-					slides.lockSwipes(false).then(()=>{					
+				setTimeout(function(){
+					slides.lockSwipes(false).then(()=>{
 						slides.slideNext();
 						slides.lockSwipes(true);
 					});
@@ -68,6 +68,6 @@ export class SinglePlayerPage implements OnInit {
   	}else{
   		//answer is incorrect
   	}
-  }	
+  }
 
 }
