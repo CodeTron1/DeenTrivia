@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Single Player <ion-icon name="hand" style="right: 0; position: absolute;" (click)="PresentToast()"></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="myContent">
+  <ion-slides [options]="sliderConfig" #myslider (ionSlidesDidLoad)="slidesloaded(myslider)">
+    <ion-slide *ngFor="let question of allquestions">
+      <ion-card>
+        <ion-card-header>
+      <h1>Q.{{question.no}} {{question.question}}?</h1>
+    </ion-card-header>
+    <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button class="button button-default button-dark"  (click)="checkanswer(question.no, '1', $event)"><p>A. {{question.option1}}</p></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="button button-default button-dark" (click)="checkanswer(question.no, '2', $event)"><p>B. {{question.option2}}</p></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="button button-default button-dark" (click)="checkanswer(question.no, '3', $event)"><p>C. {{question.option3}}</p></ion-button>
+        </ion-col>
+        <ion-col><!-- question.no, question.option4 -->
+          <ion-button class="button button-default button-dark" (click)="checkanswer(question.no, '4')"><p>D. {{question.option4}}</p></ion-button>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card-content>
+</ion-card>
+  </ion-slide>
+
+<!-- <ion-slide>
+  <ion-card>
+    <ion-card-header>
+      <h1>Q.2 Who was the first prophet in the world?</h1>
+    </ion-card-header>
+    <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button class="button button-default button-dark"><p>A. Nooh A.S (Noah)</p></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="button button-default button-dark"><p>B. Aadam A.S (Adam)</p></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="button button-default button-dark"><p>C. Muhammad</p></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="button button-default button-dark"><p>D. Ibraheem(Abraham)</p></ion-button>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card-content>
+</ion-card>
+  </ion-slide>
+</ion-slides> -->
+<!-- <ion-slides>
+    <ion-slide>
+      <h1>Slide 1</h1>
+    </ion-slide>
+
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>--> 
+  </ion-slides> 
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-icon name="checkmark" (click)="correct()"></ion-icon> 9
+          </ion-col>
+          <ion-col>
+            <ion-icon name="close" (click)="wrong()"></ion-icon> 1
+          </ion-col>
+          <ion-col>
+            <ion-icon name="heart" (click)='life()'></ion-icon> 2
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
