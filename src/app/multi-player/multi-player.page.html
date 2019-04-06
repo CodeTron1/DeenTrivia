@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -51,3 +52,58 @@
     </ion-title>
   </ion-toolbar>
 </ion-footer>
+=======
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Multi Player <ion-icon name="person-add" style="position: absolute; right: 0" (click)="addFriend()"></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="myContent">
+  <ion-header>
+    <h1>Q.1 What is the name of our Prophet?</h1>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button class="button button-default button-dark"><p>A. Ismail</p></ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="button button-default button-dark"><p>B. Moosa</p></ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button class="button button-default button-dark"><p>C. Muhammad</p></ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="button button-default button-dark"><p>D. Umar</p></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-icon name="checkmark" (click)="correct()"></ion-icon> 9
+          </ion-col>
+          <ion-col>
+            <ion-icon name="person" (click)="friend()"></ion-icon> 8
+          </ion-col>
+          <ion-col>
+            <ion-icon name="heart" (click)='life()'></ion-icon> 3
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
+>>>>>>> b07062c5911c7c3be0c252a8880c0ccb5d9f703e
