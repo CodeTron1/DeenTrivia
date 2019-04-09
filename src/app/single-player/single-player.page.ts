@@ -35,7 +35,7 @@ export class SinglePlayerPage implements OnInit {
   	console.log(this.allquestions);
   }
 
-  slidesloaded(slides: Slides){
+  slidesloaded(slides: IonSlides){
   	console.log('ionslides did load');
   	console.log(slides);
   	slides.lockSwipes(true);
