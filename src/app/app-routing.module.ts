@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'marathon', loadChildren: './marathon/marathon.module#MarathonPageModule' },
   { path: 'multi-player', loadChildren: './multi-player/multi-player.module#MultiPlayerPageModule' },
   { path: 'single-player', loadChildren: './single-player/single-player.module#SinglePlayerPageModule' },
-  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' }
+  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
+  { path: 'catogory', loadChildren: './catogory/catogory.module#CatogoryPageModule' }
 ];
 
 @NgModule({

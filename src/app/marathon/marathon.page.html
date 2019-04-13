@@ -1,47 +1,67 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Marathon</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding class="myContent">
-  <ion-header>
+<ion-content padding class="myContent" color="tertiary">
+  <ion-card padding color="light">
     <h1>Q.1 What is the name of our Prophet?</h1>
-  </ion-header>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-button class="button button-default button-dark" (click)="presentToastOptions()"><p>A. Ismail</p></ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button class="button button-default button-dark"><p>B. Moosa</p></ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-button class="button button-default button-dark"><p>C. Muhammad</p></ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button class="button button-default button-dark"><p>D. Umar</p></ion-button>
-      </ion-col>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button class="button button-default button-dark" (click)="presentToastOptions()"><p>A. Ismail</p></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="button button-default button-dark"><p>B. Moosa</p></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="button button-default button-dark"><p>C. Muhammad</p></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="button button-default button-dark"><p>D. Umar</p></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card padding color="light">
+    <h3>Difficulty Level</h3>
+    <ion-progress-bar value="0.5"></ion-progress-bar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          0
+        </ion-col>
+        <ion-col>
+          1
+        </ion-col>
+        <ion-col>
+          2
+        </ion-col>
+        <ion-col>
+          3
+        </ion-col>
+        <ion-col>
+          4
+        </ion-col>
+        <ion-col>
+          5
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-row>
+    <ion-col>
+      <ion-button color="success">Catagory</ion-button>
+    </ion-col>
   </ion-row>
-</ion-grid>
+
 </ion-content>
 
-<ion-footer>
+<ion-footer color="secondry">
   <ion-toolbar>
     <ion-title>
       <ion-grid>
         <ion-row>
           <ion-col>
             <ion-icon name="checkmark" (click)="correct()"></ion-icon> 9
-          </ion-col>
-          <ion-col>
-            <ion-icon name="heart" (click)="life()"></ion-icon> 2
           </ion-col>
         </ion-row>
       </ion-grid>
