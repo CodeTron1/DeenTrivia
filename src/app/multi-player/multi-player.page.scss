@@ -1,0 +1,64 @@
+ion-footer{
+  ion-row{
+    ion-col{
+      text-align: center;
+    }
+  }
+}
+
+ion-slide{
+  ion-card{
+    height: 90%;
+  }
+}
+
+.myContent{
+  ion-slide{
+    bottom: 0;
+  }
+}
+
+ion-col{
+  ion-button{
+    width: 100%;
+  }
+}
+
+.lifeline{
+  text-align: center;
+  ion-icon{
+    font-size: 40px;
+  }
+}
+
+ion-col{
+  div{
+    color: black
+  }
+  ion-card{
+    background-color: #104396;
+    ion-icon, h5, p{
+      color: #fff;
+    }
+  }
+}
+
+ion-footer{
+  --ion-background-color: black;
+  ion-col{
+    color: white;
+  }
+}
+
+div{
+  ion-icon{
+    font-size: 60px;
+  }
+  text-align: center;
+}
+
+div{
+  .life{
+    font-size: 30px;
+  }
+}
